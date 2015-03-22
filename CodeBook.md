@@ -7,6 +7,7 @@
 #### Merging the training and the test sets to create one data set
 
 Intializing file locations for the training set:
+                                 
                                   X_train_location <- "X_train.txt"
                                   y_train_location <- "y_train.txt"
                                   subject_train_location <- "subject_train.txt"
