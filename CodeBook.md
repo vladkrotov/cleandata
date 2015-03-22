@@ -198,6 +198,7 @@ Calculating means using the plyr package:
                                  require(plyr)
                                  averaged_data_frame <- ddply(filtered_data_frame, .(Subject, Activity), colwise(mean))
 Writing to a file:
-                                 write.table(averaged_data_frame, file = "MyTidyData.txt", row.name=FALSE)
+                                
+                                write.table(averaged_data_frame, file = "MyTidyData.txt", row.name=FALSE)
 
 The file MyTidyData.txt wil be created inside your working folder and contain the new, "averaged" data set
