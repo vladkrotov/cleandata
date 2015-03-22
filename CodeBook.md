@@ -1,15 +1,20 @@
+##Clean Data Code Book
 
-## 1. Merges the training and the test sets to create one data set.
+###Data Download
 
-###Intializing file locations for the training set
+###Data Manipulation
+
+#### Merging the training and the test sets to create one data set
+
+Intializing file locations for the training set:
                                   X_train_location <- "X_train.txt"
                                   y_train_location <- "y_train.txt"
                                   subject_train_location <- "subject_train.txt"
 
-###Intializing file locations for the test set
-X_test_location <- "X_test.txt"
-y_test_location <- "y_test.txt"
-subject_test_location <- "subject_test.txt"
+Intializing file locations for the test set
+                                  X_test_location <- "X_test.txt"
+                                  y_test_location <- "y_test.txt"
+                                  subject_test_location <- "subject_test.txt"
 
 ###Reading train data sets into vectors
 train_column1 <- read.table(X_train_location, header = FALSE)
