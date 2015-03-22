@@ -1,6 +1,6 @@
-#Project:Cleandata
-Author: Vlad Krotov
-Version:1.0b
+#Project Clean Data
+#####Author: Vlad Krotov
+#####Version:1.0b
 
 ####Project Description
 
