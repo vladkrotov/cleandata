@@ -1,7 +1,7 @@
 
-# 1. Merges the training and the test sets to create one data set.
+## 1. Merges the training and the test sets to create one data set.
 
-##Initializing file locations
+Initializing file locations
 
 ###Intializing file locations for the training set
 X_train_location <- "X_train.txt"
