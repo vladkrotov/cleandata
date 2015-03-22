@@ -8,9 +8,9 @@ The contents of the zip folder should be extracted into working directory. The f
 
 * X_train.txt
 * y_train.txt
-* subject_train.tx
-* X_test.tx
-* y_test.tx
+* subject_train.txt
+* X_test.txt
+* y_test.txt
 * subject_test.txt
 * features.txt
 
