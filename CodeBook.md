@@ -2,6 +2,18 @@
 
 ###Data Download
 
+Data files should be downloaded from here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+The contents of the zip folder should be extracted into working directory. The following files must be copied into the working directory: 
+
+*X_train.txt
+*y_train.txt
+*subject_train.tx
+*X_test.tx
+*y_test.tx
+*subject_test.txt
+*features.txt
+
 ###Data Manipulation
 
 ####Merging the training and the test sets to create one data set
