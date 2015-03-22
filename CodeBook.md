@@ -6,13 +6,13 @@ Data files should be downloaded from here: https://d396qusza40orc.cloudfront.net
 
 The contents of the zip folder should be extracted into working directory. The following files must be copied into the working directory: 
 
-*X_train.txt
-*y_train.txt
-*subject_train.tx
-*X_test.tx
-*y_test.tx
-*subject_test.txt
-*features.txt
+* X_train.txt
+* y_train.txt
+* subject_train.tx
+* X_test.tx
+* y_test.tx
+* subject_test.txt
+* features.txt
 
 ###Data Manipulation
 
