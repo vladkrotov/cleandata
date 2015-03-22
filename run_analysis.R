@@ -64,4 +64,112 @@ merged_data_frame$Activity[act6]<- "LAYING"
 merged_data_frame$Activity <- sapply(merged_data_frame$Activity,as.factor)
 merged_data_frame$Subject <- sapply(merged_data_frame$Subject,as.factor)
 
+#Extracting only the measurements on the mean and standard deviation for each measurement. Since each variable requires human interpretation, each variable is included manually after inspecting all 561 variables one-by-one
+filtered_data_frame <- data.frame("Subject"= merged_data_frame$Subject, 
+                                  "Activity" = merged_data_frame$Activity,
+                                  "tBodyAccMeanX" = merged_data_frame[,3],
+                                  "tBodyAccMeanY" = merged_data_frame[,4],
+                                  "tBodyAccMeanZ" = merged_data_frame[,5],
+                                  
+                                  "tBodyAccStdX" = merged_data_frame[,6],
+                                  "tBodyAccStdY" = merged_data_frame[,7],
+                                  "tBodyAccStdZ" = merged_data_frame[,8],
+                                  
+                                  "tGravityAccMeanX" = merged_data_frame[,43],
+                                  "tGravityAccMeanY" = merged_data_frame[,44],
+                                  "tGravityAccMeanZ" = merged_data_frame[,45],
+                                  
+                                  "tGravityAccStdX" = merged_data_frame[,46],
+                                  "tGravityAccStdY" = merged_data_frame[,47],
+                                  "tGravityAccStdZ" = merged_data_frame[,48],
+                                  
+                                  "tBodyAccJerkMeanX" = merged_data_frame[,83],
+                                  "tBodyAccJerkMeanY" = merged_data_frame[,84],
+                                  "tBodyAccJerkMeanZ" = merged_data_frame[,85],
+                                  
+                                  "tBodyAccJerkStdX" = merged_data_frame[,86],
+                                  "tBodyAccJerkStdY" = merged_data_frame[,87],
+                                  "tBodyAccJerkStdZ" = merged_data_frame[,88],
+                                 
+                                  "tBodyGyroMeanX"= merged_data_frame[,123],
+                                  "tBodyGyroMeanY"= merged_data_frame[,124],
+                                  "tBodyGyroMeanZ"= merged_data_frame[,125],
+                                  
+                                  "tBodyGyroStdX"= merged_data_frame[,126],
+                                  "tBodyGyroStdY"= merged_data_frame[,127],
+                                  "tBodyGyroStdZ"= merged_data_frame[,128],
+                                  
+                                  "tBodyGyroJerkMeanX"= merged_data_frame[,163],
+                                  "tBodyGyroJerkMeanY"= merged_data_frame[,164],
+                                  "tBodyGyroJerkMeanZ" = merged_data_frame[,165],
+                                  
+                                  "tBodyGyroJerkStdX"= merged_data_frame[,166],
+                                  "tBodyGyroJerkStdY"= merged_data_frame[,167],
+                                  "tBodyGyroJerkStdZ" = merged_data_frame[,168],
+                                  
+                                  "tBodyAccMean" = merged_data_frame[,203],
+                                  "tBodyAccStd" = merged_data_frame[,204],
+                                  
+                                  "tGravityAccMagMean" = merged_data_frame[,216],
+                                  "tGravityAccMagStd" = merged_data_frame[,217],
+                                
+                                  "tBodyAccJerkMagMean" = merged_data_frame[,229],
+                                  "tBodyAccJerkMagStd" = merged_data_frame[,230],
+                                  
+                                  "tBodyGyroMagMean" = merged_data_frame[,242],
+                                  "tBodyGyroMagStd" = merged_data_frame[,243],
+                                  
+                                  "tBodyGyroJerkMagMean" = merged_data_frame[,255],
+                                  "tBodyGyroJerkMagStd" = merged_data_frame[,256],
+                                  
+                                  "fBodyAccMeanX" = merged_data_frame[,268],
+                                  "fBodyAccMeanY" = merged_data_frame[,269],
+                                  "fBodyAccMeanZ" = merged_data_frame[,270],
+                                  
+                                  "fBodyAccStdX" = merged_data_frame[,271],
+                                  "fBodyAccStdY" = merged_data_frame[,272],
+                                  "fBodyAccStdZ" = merged_data_frame[,273],
+                                  
+                                  "fBodyAccMeanFreqX" = merged_data_frame[,296],
+                                  "fBodyAccMeanFreqY" = merged_data_frame[,297],
+                                  "fBodyAccMeanFreqZ" = merged_data_frame[,298],
+                                  
+                                  "fBodyAccJerkMeanX" = merged_data_frame[,347],
+                                  "fBodyAccJerkMeanY" = merged_data_frame[,348],
+                                  "fBodyAccJerkMeanZ" = merged_data_frame[,349],
+                                  
+                                  "fBodyAccJerkStdX" = merged_data_frame[,350],
+                                  "fBodyAccJerkStdY" = merged_data_frame[,351],
+                                  "fBodyAccJerkStdZ" = merged_data_frame[,352],
+                                  
+                                  "fBodyAccJerkMeanFreqX" = merged_data_frame[,375],
+                                  "fBodyAccJerkMeanFreqY" = merged_data_frame[,376],
+                                  "fBodyAccJerkMeanFreqZ" = merged_data_frame[,377],
+                                  
+                                  "fBodyGyroMeanX" = merged_data_frame[,426],
+                                  "fBodyGyroMeanY" = merged_data_frame[,427],
+                                  "fBodyGyroMeanZ" = merged_data_frame[,428],
+                                  
+                                  
+                                  "fBodyGyroStdX" = merged_data_frame[,429],
+                                  "fBodyGyroStdY" = merged_data_frame[,430],
+                                  "fBodyGyroStdZ" = merged_data_frame[,431],
+                                  
+                                  "fBodyAccMagMean" = merged_data_frame[,505],
+                                  "fBodyAccMagStd" = merged_data_frame[,506],
+                                  
+                                  "fBodyAccJerkMagMean" = merged_data_frame[,518],
+                                  "fBodyAccJerkMagStd" = merged_data_frame[,519],
+                                  
+                                  "fBodyGyroMagMean" = merged_data_frame[,531],
+                                  "fBodyGyroMagStd" = merged_data_frame[,532],
+                                  
+                                  "fBodyGyroJerkMagMean" = merged_data_frame[,544],
+                                  "fBodyGyroJerkMagStd" = merged_data_frame[,545]                                                                   
+                                  
+                                  )
+#Calculating means
+averaged_data_frame <- ddply(filtered_data_frame, .(Subject, Activity), colwise(mean))
 
+#Writing to a file. 
+write.table(averaged_data_frame, file = "MyTidyData.txt", row.name=FALSE)
